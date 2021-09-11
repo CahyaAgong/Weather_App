@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_sunny"
+    android:padding="24dp"
+    android:id="@+id/main_layout"
+    tools:context=".MainActivity">
+
+
+        <Spinner
+            android:id="@+id/citySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/citySpinner"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Saturday, Sept 11"
+            android:textColor="#fff"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/cityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/biryani_light"
+            android:text="London"
+            android:textColor="#fff"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/weatherType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cityText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-8dp"
+            android:fontFamily="@font/biryani_light"
+            android:text="Sun and Cloud"
+            android:textColor="#fff"
+            android:textSize="24dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weatherType"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/humidityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/biryani_light"
+                android:text="Humidity / Pressure"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/textHumidPress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/biryani_light"
+                android:text="hPa / %"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/icon_weather"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_sunny" />
+
+        <TextView
+            android:id="@+id/temperText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_weather"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/biryani_light"
+            android:text="0°C"
+            android:textColor="#FFF"
+            android:textSize="42dp" />
+
+        <LinearLayout
+            android:id="@+id/todayWrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temperText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/biryani_light"
+                android:text="Forecast"
+                android:textColor="#fff"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:background="#fff" />
+        </LinearLayout>
+
+        <GridLayout
+            android:id="@+id/dataWrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/todayWrap"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:rowCount="1">
+
+
+        </GridLayout>
+
+    <LinearLayout
+        android:layout_below="@id/dataWrap"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/addtown_Text"
+            android:layout_gravity="center"
+            android:fontFamily="@font/biryani_light"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:text="Add own Town"
+            android:layout_marginEnd="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/refresh_Text"
+            android:layout_gravity="center"
+            android:fontFamily="@font/biryani_light"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:text="Refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
